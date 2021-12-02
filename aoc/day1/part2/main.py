@@ -1,5 +1,5 @@
 from aoc import get_puzzle
-from aoc.day1.am.main import solve
+from aoc.day1.part1.main import solve
 
 
 def get_sliding_window_total(puzzle):
@@ -7,6 +7,7 @@ def get_sliding_window_total(puzzle):
 
 
 if __name__ == '__main__':
-    sliding_window_sums = get_sliding_window_total(get_puzzle(day=1))
+    puzzle = get_puzzle(day=1)
+    sliding_window_sums = get_sliding_window_total([int(v) for v in puzzle])
     count = solve(sliding_window_sums)
     print(f'{count=}')

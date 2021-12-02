@@ -1,6 +1,6 @@
 from hamcrest import assert_that, is_
 
-from aoc.day1.pm import main
+from aoc.day1.part2 import main
 
 
 def test_can_get_first_sliding_window_total():

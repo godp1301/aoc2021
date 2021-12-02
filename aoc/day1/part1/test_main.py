@@ -1,6 +1,6 @@
 from hamcrest import assert_that, is_
 
-from aoc.day1.am.main import solve
+from aoc.day1.part1.main import solve
 
 
 def test_example():
