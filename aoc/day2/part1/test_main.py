@@ -10,26 +10,26 @@ class TestSubmarine(unittest.TestCase):
         self.sub = Submarine()
 
     def test_initial_distance(self):
-        assert_that(self.sub.get_distance(), is_(0))
+        assert_that(self.sub.get_position(), is_(0))
 
     def test_initial_depth(self):
         assert_that(self.sub.get_depth(), is_(0))
 
     def test_can_move_forward(self):
         self.sub.forward(5)
-        assert_that(self.sub.get_distance(), is_(5))
+        assert_that(self.sub.get_position(), is_(5))
         assert_that(self.sub.get_depth(), is_(0))
 
     def test_can_dive(self):
         self.sub.down(3)
         assert_that(self.sub.get_depth(), is_(3))
-        assert_that(self.sub.get_distance(), is_(0))
+        assert_that(self.sub.get_position(), is_(0))
 
     def test_can_surface(self):
         self.sub.down(3)
         self.sub.up(1)
         assert_that(self.sub.get_depth(), is_(2))
-        assert_that(self.sub.get_distance(), is_(0))
+        assert_that(self.sub.get_position(), is_(0))
 
     def test_example(self):
         self.sub.forward(5)
@@ -39,7 +39,7 @@ class TestSubmarine(unittest.TestCase):
         self.sub.down(8)
         self.sub.forward(2)
 
-        assert_that(self.sub.get_distance(), is_(15))
+        assert_that(self.sub.get_position(), is_(15))
         assert_that(self.sub.get_depth(), is_(10))
 
     def test_example_with_parsing(self):
