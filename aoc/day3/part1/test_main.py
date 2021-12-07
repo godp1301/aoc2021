@@ -1,6 +1,7 @@
 from hamcrest import assert_that, is_
 
-from aoc.day3.part1.main import gamma_rate_of, epsilon_rate_of, power_consumption_of
+from aoc.day3 import gamma_rate_of
+from aoc.day3.part1.main import epsilon_rate_of, power_consumption_of
 
 
 def test_single_zero():
